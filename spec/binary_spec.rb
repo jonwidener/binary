@@ -30,7 +30,6 @@ RSpec.describe Binary do
   end
 
   it 'initializes with integers' do
-    pending 'Not yet implemented'
     Binary.new 1, 2
   end
 
@@ -43,7 +42,7 @@ RSpec.describe Binary do
       end
       answer = args.reduce { |el, res| el & res }
       it "[#{args.map { |el| el.to_s 2}.join(', ')}]: #{answer.to_s 2}" do
-        expect(Binary.and(args.map { |arg| arg.to_s(2) })).to eq answer.to_s(2)
+        expect(Binary.and(args.map { |arg| arg })).to eq answer.to_s(2)
       end
     end
   end
