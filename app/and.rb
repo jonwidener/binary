@@ -6,6 +6,3 @@ class BinaryAnd < Binary
   end
 end
 
-if __FILE__ == $0
-  Binary.and('101', '11')
-end
